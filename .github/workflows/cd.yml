@@ -1,0 +1,12 @@
+name: cd pipeline
+  
+
+on: 
+  workflow_run: 
+    workflow s: [ci/cd pipeline]
+      types: [completed]
+
+      jobs: 
+          deploy: 
+              runs-on: ubuntu-latest
+                
